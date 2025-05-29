@@ -1,7 +1,9 @@
+from typing import Generator
 from sqlalchemy.orm import sessionmaker
 from sqlmodel import SQLModel, create_engine, Session
+
+from app.models import *
 from app.core.config import settings
-from typing import Generator
 
 # create engine
 engine = create_engine(

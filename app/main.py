@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import uvicorn
 
+# from app.api.v1.api import api_router
 from app.api.v1.api import api_router
 from app.core.config import settings
 from app.core.exceptions import CustomException

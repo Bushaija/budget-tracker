@@ -1,0 +1,212 @@
+[
+  {
+    "province":"eastern",
+    "district":"bugesera",
+    "facility_type": "hospital",
+    "hospital":"nyamata"
+  },
+  {
+    "province":"eastern",
+    "district":"gatsibo",
+    "facility_type": "hospital",
+    "hospital":"ngarama"
+  },
+  {
+    "province":"eastern",
+    "district":"gatsibo",
+    "facility_type": "hospital",
+    "hospital":"rugarama"
+  },
+  {
+    "province":"eastern",
+    "district":"kayonza",
+    "facility_type": "hospital",
+    "hospital":"gahini"
+  },
+  {
+    "province":"eastern",
+    "district":"kayonza",
+    "facility_type": "hospital",
+    "hospital":"rwinkwavu"
+  },
+  {
+    "province":"eastern",
+    "district":"kirehe",
+    "facility_type": "hospital",
+    "hospital":"kirehe"
+  },
+  {
+    "province":"eastern",
+    "district":"ngoma",
+    "facility_type": "hospital",
+    "hospital":"kibungo"
+  },
+  {
+    "province":"eastern",
+    "district":"nyagatare",
+    "facility_type": "hospital",
+    "hospital":"gatunda"
+  },
+  {
+    "province":"eastern",
+    "district":"nyagatare",
+    "facility_type": "hospital",
+    "hospital":"nyagatare"
+  },
+  {
+    "province":"eastern",
+    "district":"rwamagana",
+    "facility_type": "hospital",
+    "hospital":"rwamagana"
+  },
+  {
+    "province":"kigali",
+    "district":"gasabo",
+    "facility_type": "hospital",
+    "hospital":"kibagabaga"
+  },
+  {
+    "province":"kigali",
+    "district":"nyarugenge",
+    "facility_type": "hospital",
+    "hospital":"muhima"
+  },
+  {
+    "province":"kigali",
+    "district":"nyarugenge",
+    "facility_type": "hospital",
+    "hospital":"nyarugenge"
+  },
+  {
+    "province":"northern",
+    "district":"burera",
+    "facility_type": "hospital",
+    "hospital":"butaro"
+  },
+  {
+    "province":"northern",
+    "district":"gakenke",
+    "facility_type": "hospital",
+    "hospital":"gatonde"
+  },
+  {
+    "province":"northern",
+    "district":"gakenke",
+    "facility_type": "hospital",
+    "hospital":"nemba"
+  },
+  {
+    "province":"northern",
+    "district":"gakenke",
+    "facility_type": "hospital",
+    "hospital":"ruli"
+  },
+  {
+    "province":"northern",
+    "district":"gicumbi",
+    "facility_type": "hospital",
+    "hospital":"byumba"
+  },
+  {
+    "province":"northern",
+    "district":"musanze",
+    "facility_type": "hospital",
+    "hospital":"ruhengeri"
+  },
+  {
+    "province":"northern",
+    "district":"rulindo",
+    "facility_type": "hospital",
+    "hospital":"rutongo"
+  },
+  {
+    "province":"southern",
+    "district":"gisagara",
+    "facility_type": "hospital",
+    "hospital":"gakoma"
+  },
+  {
+    "province":"southern",
+    "district":"gisagara",
+    "facility_type": "hospital",
+    "hospital":"kibilizi"
+  },
+  {
+    "province":"southern",
+    "district":"huye",
+    "facility_type": "hospital",
+    "hospital":"kabutare"
+  },
+  {
+    "province":"southern",
+    "district":"kamonyi",
+    "facility_type": "hospital",
+    "hospital":"remera-rukoma"
+  },
+  {
+    "province":"southern",
+    "district":"muhanga",
+    "facility_type": "hospital",
+    "hospital":"kabgayi"
+  },
+  {
+    "province":"southern",
+    "district":"muhanga",
+    "facility_type": "hospital",
+    "hospital":"nyabikenke"
+  },
+  {
+    "province":"southern",
+    "district":"nyamagabe",
+    "facility_type": "hospital",
+    "hospital":"kaduha"
+  },
+  {
+    "province":"southern",
+    "district":"nyamagabe",
+    "facility_type": "hospital",
+    "hospital":"kigeme"
+  },
+  {
+    "province":"southern",
+    "district":"nyanza",
+    "facility_type": "hospital",
+    "hospital":"nyanza"
+  },
+  {
+    "province":"southern",
+    "district":"nyaruguru",
+    "facility_type": "hospital",
+    "hospital":"munini"
+  },
+  {
+    "province":"southern",
+    "district":"ruhango",
+    "facility_type": "hospital",
+    "hospital":"gitwe"
+  },
+  {
+    "province":"southern",
+    "district":"ruhango",
+    "facility_type": "hospital",
+    "hospital":"ruhango"
+  },
+  {
+    "province":"western",
+    "district":"ngororero",
+    "facility_type": "hospital",
+    "hospital":"muhororo"
+  },
+  {
+    "province":"western",
+    "district":"rubavu",
+    "facility_type": "hospital",
+    "hospital":"gisenyi"
+  },
+  {
+    "province":"western",
+    "district":"rutsiro",
+    "facility_type": "hospital",
+    "hospital":"murunda"
+  }
+]
