@@ -23,7 +23,7 @@ app = FastAPI(
 # setup middleware
 setup_cors(app)
 setup_rate_limiting(app)
-setup_logging(app)
+# setup_logging(app)
 
 # include routers
 app.include_router(api_router, prefix="/api/v1")

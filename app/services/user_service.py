@@ -128,6 +128,7 @@ class UserService:
                     facility_id = current_user.facility_id
 
         # Calculate pagination
+ 
         skip = (page - 1) * size
         
         # Get users and total count
@@ -141,10 +142,11 @@ class UserService:
             is_active=is_active,
             search=search
         )
+     
 
         # Convert to response objects
         user_responses = [self._convert_to_response(user) for user in users]
-        
+        print("user_responses", user_responses)
         # Calculate total pages
         total_pages = math.ceil(total / size) if total > 0 else 1
 
@@ -230,6 +232,7 @@ class UserService:
         return updated_user is not None
 
     def _convert_to_response(self, user: Users) -> UserResponse:
+        print("user", user)
         """Convert User model to UserResponse."""
         return UserResponse(
             id=user.id,
@@ -240,8 +243,10 @@ class UserService:
             facility_id=user.facility_id,
             role=user.role,
             is_active=user.is_active,
-            created_at=user.created_at,
             updated_at=user.updated_at,
+            created_at=user.created_at if user.created_at else None,
+
+            
             province_name=user.province.name if user.province else None,
             district_name=user.district.name if user.district else None,
             facility_name=user.facility.name if user.facility else None,
