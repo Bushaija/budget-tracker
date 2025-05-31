@@ -58,16 +58,36 @@ if [ ! -f "$JSON_FILE" ]; then
     exit 1
 fi
 
-# Check if Python is available
-if ! command -v python3 &> /dev/null; then
-    print_error "Python3 is not installed or not in PATH"
+# Determine which Python command to use
+PYTHON_CMD=""
+if command -v python3 &> /dev/null; then
+    PYTHON_CMD="python3"
+elif command -v python &> /dev/null; then
+    PYTHON_CMD="python"
+elif command -v py &> /dev/null; then
+    PYTHON_CMD="py"
+else
+    print_error "Python is not installed or not in PATH"
     exit 1
 fi
 
+print_status "Using Python command: $PYTHON_CMD"
+
+# Check if psycopg2 is available
+print_status "Checking for required Python packages..."
+if ! $PYTHON_CMD -c "import psycopg2" 2>/dev/null; then
+    print_error "psycopg2 package is not installed"
+    print_warning "Please install it with: pip install psycopg2-binary"
+    exit 1
+fi
+
+print_success "Required packages are available"
+
 # Check database connectivity
 print_status "Testing database connection..."
-if ! python3 -c "
+CONNECTION_TEST=$($PYTHON_CMD -c "
 import psycopg2
+import sys
 try:
     conn = psycopg2.connect(
         host='$DB_HOST',
@@ -77,21 +97,25 @@ try:
         password='$DB_PASSWORD'
     )
     conn.close()
-    print('Connection successful')
+    print('SUCCESS')
 except Exception as e:
-    print(f'Connection failed: {e}')
-    exit(1)
-" 2>/dev/null; then
-    print_error "Cannot connect to database. Please check your database configuration."
+    print(f'ERROR: {e}')
+    sys.exit(1)
+" 2>&1)
+
+if [[ $CONNECTION_TEST == *"SUCCESS"* ]]; then
+    print_success "Database connection established"
+else
+    print_error "Cannot connect to database: $CONNECTION_TEST"
     print_warning "Make sure the database is running and credentials are correct."
+    print_warning "You can test the connection manually with:"
+    print_warning "psql -h $DB_HOST -p $DB_PORT -U $DB_USER -d $DB_NAME"
     exit 1
 fi
 
-print_success "Database connection established"
-
 # Run the seeding script
 print_status "Running database seeding script..."
-if python3 "$SEED_SCRIPT"; then
+if $PYTHON_CMD "$SEED_SCRIPT"; then
     print_success "Database seeding completed successfully!"
     print_status "Your database has been initialized with:"
     print_status "- Provinces and districts from Rwanda"
