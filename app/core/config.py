@@ -16,7 +16,8 @@ class Settings(object):
 	ALGORITHM: str = "HS256"
 
 	# database settings
-	DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5433/hivtracker"
+    # TODO: Add connection string to .env file
+	DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/hivtracker"
 	DATABASE_TEST_URL: Optional[str] = None
 
 	# CORS Settings

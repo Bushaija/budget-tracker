@@ -25,6 +25,7 @@ dependencies = [
     "psycopg2>=2.9.10",
     "python-jose>=3.5.0",
     "tqdm>=4.67.1",
+    "psycopg2-binary>=2.9.10",
 ]
 
 [tool.uv]
